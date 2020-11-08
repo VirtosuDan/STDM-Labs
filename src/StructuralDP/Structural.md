@@ -28,9 +28,10 @@ Some examples of from this category of design patterns are :
 
 6)Flyweight-Flyweight pattern is primarily used to reduce the number of objects created and to decrease memory footprint and increase performance.
 
-7_Proxy-	Allows a separate object to be used as a substitute to provide controlled access to an object that is not accessible by normal means.
+7)Proxy-	Allows a separate object to be used as a substitute to provide controlled access to an object that is not accessible by normal means.
 
                                                                         Implementation :
+1. Adapter pattern acts as a connector between two incompatible interfaces that otherwise cannot be connected directly. From my point of view , the usage of this pattern for this domain is very important . We have 2 different measurements for the transport , which are Miles/Hour and Kilometer/Hour . In order to convert Miles/Hour I created an adapter for this. I have 2 interfaces IMovable and IMovable adapter . Next I created concrete classes that implements IMovable , which represents speed on the rural roads(RuralSpeed) and speed for interstate roads(InterstateSpeed). To obtain the needed conversion , the MovableAdapterImplementation was created , and in this way we obtained the desired results . Following screeshots will definde the process of implementing this pattern and the results:
 
 In this project I continued work from the previous laboratory with the Transport domain. I've implemented 3 Structural Design Patterns(Facade , Proxy and Adapter) that allows to extend functionalities to the system .
 
