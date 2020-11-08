@@ -32,3 +32,4 @@ Some examples of from this category of design patterns are :
 
                                                                         Implementation :
 
+In this project I continued work from the previous laboratory , and added functionalities for the Transport domain . I've implemented 3 Structural Design Patterns(Facade , Proxy and Adapter) that allows to extend functionalities to the system .
