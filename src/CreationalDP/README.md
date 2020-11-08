@@ -1,54 +1,55 @@
-# Topic: *Creational Design Patterns*
-### Author: *Drumea Vasile*
-------
-## Objectives :
-__1. Study the Creational Design Patterns__
+                                                                   STDM Laboratory work No.1
+                                                                   Topic: Creational Design Patterns
+                                                                   Prepared by : Virtosu Dan , FAF-181
+                                                                   Evaluated by : Drumea Vasile 
+                                                                   
+                                                                        Main tasks :
+1. Choose an OO programming language and a suitable IDE or Editor (No frameworks/libs/engines allowed);
 
-__2. Implement them in real projects__
+2. Select a domain area for the sample project;
 
-## Theory :
-In software engineering, creational design patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the situation.
+3. Define the main involved classes and think about what instantiation mechanisms are needed;
 
-The basic form of object creation could result in design problems or added complexity to the design. Creational design patterns solve this problem by somehow controlling this object creation.
+4. Based on the previous point, implement atleast 3 creational design patterns in your project;
 
-Some examples of this kind of design patterns are :
+                                                                           Theory :
 
-   * Singleton
-   * Builder
-   * Prototype
-   * Object Pooling
-   * Factory Method
-   * Abstract Factory
-   
-## Implementation :
-In this project I've implemented 5 creational design patterns i.e. (Singleton, Builder, Prototype, Factory Method and Abstract Factory) with the emphasis on the fundamental object _**CreationalDP.models.Transport**_. The player class contains 4 attributes and the *get* and *set* methods as you can see in *CreationalDP.models.Transport.java* file. Also in that file is a method called *clone()* which is used to return a clone of the object if it exists in the *HashMap* which I'm maintaining in _**AbstractFactoryMethod**_ class.
+In software engineering, creational design patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form of object creation could result in design problems or added complexity to the design. Creational design patterns solve this problem by somehow controlling this object creation.
+Creational design patterns are composed of two dominant ideas.
+One is encapsulating knowledge about which concrete classes the system use.
+Another is hiding how instances of these concrete classes are created and combined.
 
-The simplest DP, Singleton I've implemented in _**CreationalDP.Factories.FactoryCreator**_ class. For this I use a static and volatile (In case of different threads) attribute for the instance. Then I declare the constructor as private so that the class could be instantiated only from _getInstance()_ method which is a static one and by a simple if i.e. : 
-~~~
-if (instance == null) {
-    synchronized (CreationalDP.Factories.FactoryCreator.class) {
-        if (instance == null) {
-            instance = new CreationalDP.Factories.FactoryCreator();
-        }
-    }
- }
- ~~~
-to check if the instance is null I create a new one is needed. In the meantime I use synchronized to escape the case of 2 threads trying to instantiate at the same time.
+We have the following examples of Creational Design Patterns:
 
-The builder DP ensures that a program can create different objects by the same creational process. In my project there are 2 stages to create the player. First is chosen the factory by the sport and then in the coresponding factory is chosen a builder class. I've put some text with the description of the position of the player for the sake of example, it could have been extended to more abstract functions. 
+1)Abstract Factory -Creates an instance of several families of classes
 
-For the prototype DP as I said previously I maintain a *HashMap* with *String*, *CreationalDP.models.Transport* pairs to find each time if I've created a player with the current sport or not. In the affirmative case I return a clone.
+2)Builder -Separates object construction from its representation
 
-The factory methods that I've used in my project are in _**CreationalDP.Builders.abstractions.TransportBuilder**_ class. There are multiple classes which inherit the top one. Then based on the position parameter it is chosen one of them.
+3)Factory Method -Creates an instance of several derived classes
 
-Above that I have the factories which get the coresponding builder for each sport. These factories extend the _**AbstractFactoryMethod**_ it being used in _**CreationalDP.Factories.FactoryCreator**_ class which is just an additional level of abstraction in which the factory is chosen and returned in the _**MainClient**_ class. 
+4)Object Pool - Avoid expensive acquisition and release of resources by recycling objects that are no longer in use
 
-The proccess from _**CreationalDP.Factories.FactoryCreator**_ till builder is in the following lines:
-~~~
- CreationalDP.Factories.FactoryCreator creator = CreationalDP.Factories.FactoryCreator.getInstance();
- AbstractFactoryMethod playerFactory = creator.getFactory(sport);
- CreationalDP.Builders.abstractions.TransportBuilder builder = playerFactory.getBuilder(position);
-~~~
+5)Prototype- A fully initialized instance to be copied or cloned
 
-## Screenshot
-![](/images/FirstLab/Capture.PNG)
+6)Singleton-A class of which only a single instance can exist
+
+                                                                        Implementation :
+
+So for the realization of this project I implemented 4 types of CreationalDP , which are : Singleton , Factory , AbstractFactory and the Builder. The laboratory is concentrated other the Transport class , which contains 4 attributes(brand , model , type , body) , getters and setters.
+
+Abstract Factory is implemented with Factory method so using these DP we obtained 2 levels of abstractions . The Factory method lets a class defer instantiation to subclasses, which is useful for constructing individual objects for a specific purpose without the requestor knowing the specific class being instantiated.The "Abstract Factory" pattern provides an abstract class that determines the appropriate concrete class to instantiate to create a set of concrete products. First , in FactoryMethod we created the main transport types , and in the Abstract Factory we obtained families of concrete classes . 
+
+From my point of view , Singleton DP is the simplest one , cause it requires just few lines of code .The Singleton pattern ensures that a class has only one instance, and provides a global point of access to that class. It ensures that all objects that use an instance of this class use the same instance.
+
+![s](https://user-images.githubusercontent.com/45829623/95080895-6f722980-0721-11eb-98bd-a5821accc94b.PNG)
+
+
+The Builder pattern separates the construction of a complex object from its representation so the same construction process can create different objects. In the corresponding factory we can see a builder class(BikeFactory and ScooterBuilder). The builder classes are created in TransportBuilder , in which I described the information about each body .
+
+The output of the program:
+
+![4](https://user-images.githubusercontent.com/45829623/95081507-5027cc00-0722-11eb-98ef-91bc08bc8f16.png)
+
+
+                                                                           Conclusion:
+In this laboratory work the main goal was to became familiarized with Creational Design Patterns . In general DP helps delelopers and software engineers to write clean and understandable code . So I the goal is achieved , and we will use the DP each time we need to express our code in a clear way . 
