@@ -36,6 +36,8 @@ In this project I continued work from the previous laboratory with the Transport
 1. Adapter pattern acts as a connector between two incompatible interfaces that otherwise cannot be connected directly. From my point of view , the usage of this pattern for this domain is very important . We have 2 different measurements for the transport , which are Miles/Hour and Kilometer/Hour . In order to convert Miles/Hour I created an adapter for this. I have 2 interfaces IMovable and IMovableAdapter that represents 2 incompatible interfaces . Next I created concrete classes that implements IMovable , which represents speed on the rural roads(RuralSpeed) and speed for interstate roads(InterstatesSpeed). To obtain the needed conversion , the MovableAdapterImplementation was created , and in this way we obtained the desired results . Following screeshots will define the process of implementing this pattern :
 ![download](https://user-images.githubusercontent.com/45829623/98462526-a2df2280-21bd-11eb-9a49-6bcce67a0be2.png)
 
+2.Facade is used to hide the complexities of the system . 
+
 
 
 
