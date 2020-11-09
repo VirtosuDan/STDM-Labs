@@ -11,7 +11,7 @@
 
 3. Document the work in a separate markdown file;
 
-                                                                           Theory :
+#                                                                           Theory :
 In software engineering, structural design patterns are design patterns that ease the design by identifying a simple way to realize relationships between entities.Structural class patterns use inheritance to create a hierarchy of classes/abstractions, but the structural object patterns use composition which is generally a more flexible alternative to inheritance.
  
 Some examples of from this category of design patterns are :
