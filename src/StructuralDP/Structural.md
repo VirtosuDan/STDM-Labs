@@ -16,19 +16,19 @@ In software engineering, structural design patterns are design patterns that eas
  
 Some examples of from this category of design patterns are :
 
-1)Adapter-Allows the conversion of the interface of a class to another interface that clients expect. This allows classes with incompatible interfaces to work together.
+**1)Adapter**-Allows the conversion of the interface of a class to another interface that clients expect. This allows classes with incompatible interfaces to work together.
 
-2)Bridge-	Allows the separation of an abstract interface from its implementation. This eliminates the dependency between the two, allowing them to be modified independently.
+**2)Bridge** -	Allows the separation of an abstract interface from its implementation. This eliminates the dependency between the two, allowing them to be modified independently.
 
-3)Composite-Composite pattern is used where we need to treat a group of objects in similar way as a single object.
+**3)Composite** -Composite pattern is used where we need to treat a group of objects in similar way as a single object.
 
-4)Decorator-Extends the functionality of an object in a manner that is transparent to its clients without using inheritance.
+**4)Decorator** -Extends the functionality of an object in a manner that is transparent to its clients without using inheritance.
 
-5)Facade-	Provides a higher-level interface to a subsystem of classes, making the subsystem easier to use.
+**5)Facade** -	Provides a higher-level interface to a subsystem of classes, making the subsystem easier to use.
 
-6)Flyweight-Flyweight pattern is primarily used to reduce the number of objects created and to decrease memory footprint and increase performance.
+**6)Flyweight** -Flyweight pattern is primarily used to reduce the number of objects created and to decrease memory footprint and increase performance.
 
-7)Proxy-	Allows a separate object to be used as a substitute to provide controlled access to an object that is not accessible by normal means.
+**7)Proxy** -	Allows a separate object to be used as a substitute to provide controlled access to an object that is not accessible by normal means.
 
                                                                         Implementation :
 In this project I continued work from the previous laboratory with the Transport domain. I've implemented 3 Structural Design Patterns(Facade , Proxy and Adapter) that allows to extend functionalities to the system .
