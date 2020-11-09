@@ -42,6 +42,8 @@ In this project I continued work from the previous laboratory with the Transport
 3. Proxy is used when a class need to represent functionality of another class . I have the IRepair interface , and 2 classes that implements this interface(TransportService and TransportServiceProxy) . In TransportService a have just one method that validates the reservation to service . In order to represent the functionality of this class I implemented the TransportServiceProxy , in which I've implemented method that helps us to call to service and schedule your car for some repair.
 ![proxy](https://user-images.githubusercontent.com/45829623/98539685-70085d80-2295-11eb-9725-386d664bbdf9.png)
 
+                                                                           Results and Conclusion:
+![results](https://user-images.githubusercontent.com/45829623/98540264-574c7780-2296-11eb-99ff-ade4d9f3a86e.png)
 
 
 
