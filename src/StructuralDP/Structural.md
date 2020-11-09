@@ -45,6 +45,7 @@ In this project I continued work from the previous laboratory with the Transport
                                                                            Results and Conclusion:
 ![results](https://user-images.githubusercontent.com/45829623/98540264-574c7780-2296-11eb-99ff-ade4d9f3a86e.png)
 
+In conclusion , the main goal of this laboratory work was to continue the work from the previous lab and add some new functionalities to the system using the Structural Design Patterns . In order to achieve this , I implemented 3 StructuralDP (Facade , Proxy and Adapter) . Now the client is able to modify the color of different parts of the body , to adapt the speed from Miles/Hour to Km/Hour and to made a reservation for Service.
 
 
 
