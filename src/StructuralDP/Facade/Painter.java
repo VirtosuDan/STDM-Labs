@@ -18,11 +18,4 @@ public class Painter {
         body.changeColor(color);
         hood.changeColor(color);
     }
-   /* public void paintBody(String color){
-        body.changeColor(color);
-    }
-    public void paintHood(String color){
-        hood.changeColor(color);
-    }*/
-
 }
