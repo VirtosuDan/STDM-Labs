@@ -1,63 +1,52 @@
-import StructuralDP.Adapter.InterstatesSpeed;
-import StructuralDP.Adapter.MovableAdapterImplementation;
-import StructuralDP.Adapter.RuralSpeed;
-import StructuralDP.Adapter.abstractions.IMovable;
-import StructuralDP.Adapter.abstractions.IMovableAdapter;
-import StructuralDP.Facade.Painter;
-import StructuralDP.Proxy.TransportServiceProxy;
-import StructuralDP.Proxy.abstractions.IRepair;
+import BehavioralDP.BehavioralClient;
+import CreationalDP.CreationalClient;
+import StructuralDP.StructuralClient;
+
+import java.io.IOException;
+import java.util.Scanner;
 
 public class MainClient {
 
-    public static void main(String[] args) {
-       /* while (true) {
-            try {
-                BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-                System.out.println("\nEnter the type");
-                String type = input.readLine();
-                if (type.length() == 0)
-                    break;
-                System.out.println("\nEnter the brand");
-                String brand = input.readLine();
-                System.out.println("\nEnter the model");
-                String model = input.readLine();
-                System.out.println("\nEnter the body");
-                String body = input.readLine();
+    public static void main(String[] args) throws IOException {
+            while (true) {
+            System.out.println("\n\n\t\t\t\t\t\t\t\tWelcome to my Transport App \n\t\t\t In order to perform operations please choose a number:");
+            System.out.println("\t\t\t\t\t1.Buy a new Transport");
+            System.out.println("\t\t\t\t\t2.Color the body of your Transport");
+            System.out.println("\t\t\t\t\t3.Schedule for a service");
+            System.out.println("\t\t\t\t\t4.Adapt your speed form MPH in KMPH");
+            System.out.println("\t\t\t\t\t5.Change your wheels depending of the season");
+            System.out.println("\t\t\t\t\t6.Exit");
 
-                FactoryCreator creator = FactoryCreator.getInstance();
-                IAbstractFactory TransportFactory = creator.getFactory(type);
-                TransportBuilder builder = TransportFactory.getBuilder(body);
-                builder.addBrand(brand);
-                builder.addModel(model);
-                builder.addType(type);
-                builder.addBody(body);
-                builder.getInfoAboutBody();
-                } catch (IOException e) {
-                    e.printStackTrace();
+            Scanner input = new Scanner(System.in);
+
+                String operation = input.next();
+                switch (operation) {
+                    case "1":
+                        CreationalClient client = new CreationalClient();
+                        client.creational();
+                    case "2":
+                        StructuralClient structuralClient = new StructuralClient();
+                        structuralClient.facade();
+                        break;
+                    case "3":
+                        StructuralClient structuralClient2 = new StructuralClient();
+                        structuralClient2.proxy();
+                        break;
+                    case "4":
+                        StructuralClient structuralClient3 = new StructuralClient();
+                        structuralClient3.adapter();
+                        break;
+                    case "5":
+                        BehavioralClient behavioralClient = new BehavioralClient();
+                        behavioralClient.behavioral();
+                        break;
+                    case "6":
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("No such command");
                 }
-
-
-        }*/
-        //Test for Facade
-        Painter painter = new Painter();
-        painter.paint("black");
-        System.out.println("\n\n");
-
-        //Test for Proxy
-        IRepair repairTransport = new TransportServiceProxy();
-        repairTransport.callToService();
-        System.out.println("\n\n");
-
-        //Test for Adapter
-        IMovable interstateSpeed = new InterstatesSpeed();
-        IMovableAdapter interstateSpeedAdapter = new MovableAdapterImplementation(interstateSpeed);
-        System.out.println("The maximal speed for interstate roads in US is:"+interstateSpeedAdapter.getSpeed()+"km/h");
-        IMovable ruralSpeed = new RuralSpeed();
-        IMovableAdapter ruralSpeedAdapter = new MovableAdapterImplementation(ruralSpeed);
-        System.out.println("The maximal speed for rural roads in US is:"+ruralSpeedAdapter.getSpeed()+"km/h");
-
-
-
+            }
 
         }
     }
