@@ -6,3 +6,4 @@
 
 [Creational DP](https://github.com/VirtosuDan/STDM-Labs/tree/master/src/CreationalDP) <br />
 [Structural DP](https://github.com/VirtosuDan/STDM-Labs/tree/master/src/StructuralDP) <br />
+[Behavioral DP](https://github.com/VirtosuDan/STDM-Labs/tree/master/src/BehavioralDP) <br />
