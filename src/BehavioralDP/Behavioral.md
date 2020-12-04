@@ -45,5 +45,8 @@
 ![f1](https://user-images.githubusercontent.com/45829623/101175740-33d6db80-364e-11eb-9574-8234e0127f30.PNG)
 
 
+##                                                                  Conclusions
+Overall , the Design Patterns are very powerfull mechanisms for each application . These laboratories helped me to make my code more understandable and easier to follow . Now I have a working application , with a Main Client , that is able to perform all operations .
+
 
                                                                 
